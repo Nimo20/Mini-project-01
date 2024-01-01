@@ -18,4 +18,4 @@ Sample Page
 
 Note: The Coming Soon box is an image that is provided in the assets/image-1.png directory.
 
-![Image](Images/sample-page.png)
+![Image](Asset/Image/sample-page.png)

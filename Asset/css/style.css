@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-size: 20px;
+    background-color: #FDF8F5;
+    color: #4F4846;
+}
+
+header {
+    position: relative;
+    border-bottom: 10px solid #DDAF94;
+    top: -10px;
+}
+
+h1 {
+    text-align: center;
+    padding: 60px;
+    margin: 20px;
+    position: relative;
+    top: -80px;
+}
+
+a {
+    text-decoration: none;
+    color: #FDF8F5;
+}
+
+li {
+    display: inline;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+header,
+footer {
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    background-color: #266150;
+    margin: 0%;
+}
+
+p {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 500px;
+    padding: 10px;
+    border: 5px solid #DDAF94;
+    border-radius: 20px;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+
+}
+
+section {
+    margin-bottom: 0;
+    padding: 20px 10px 40px 10px;
+    border-top: 3px solid #DDAF94;
+    background-color: #E8CEBF;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+    width: 300px;
+    border: 1px solid #4F4846;
+}
+
+textarea {
+    vertical-align: top;
+    height: 60px;
+}
+
+button {
+    height: 40px;
+    width: 120px;
+    background-color: #4F4846;
+    color: #FDF8F5;
+}
+figure {
+    margin-bottom: 40px;
+}
+footer {
+    position: absolute;
+    margin-top: 0;
+    bottom: 0;
+    border-bottom: 10px solid #4F4846;
+    color: #FDF8F5;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.text-right {
+    text-align: right;
+}

@@ -4,48 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Asset/css/style.css">
+    <title>CSS Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <nav class="text-right">
-            <ul>
-                <li><a href="https://github.com/">Github</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1 class="text-center">My New Website</h1>
-        <figure>
-            <img src="./Asset/Image/image-1.png" alt="Graphic with Coming Soon text">
-            <figcaption class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</figcaption>
-        </figure>
-        <section id="contact">
-            <h2 class="text-center">Contact Me</h2>
-            <form>
-                <ul>
-                    <li>
-                        <label class="text-right" for="name">Name:</label>
-                        <input type="text" id="name" name="user-name">
-                    </li>
-                    <li>
-                        <label class="text-right" for="email">Email:</label>
-                        <input type="text" id="email" name="user-email">
-                    </li>
-                </ul>
-                <div class="text-center">
-                    <button type="submit">SEND</button>
-                </div>
-            </form>
-        </section>
-    </main>
-    <footer class="text-center">
-        © 2023 My New Website Productions
-    </footer>
+    <div class="app">
+        <h1>Answer the following questions Correctly.</h1>
+        <div class="question">
+            <h2>Select from the options below.</h2>
+        </div>
+        <div id="options">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+            <button class="btn">Answer 5</button>
+        </div>
+
+        <button id="next-btn">Next</button>
+
+    </div>
+    <script src="simple.js"></script>
 </body>
 
 </html>

@@ -29,37 +29,52 @@ var quiz = [
 var question = document.getElementById('question');
 var answerbutton = document.getElementById('options');
 var nextbutton = document.getElementById('next-btn');
-// var option0 = document.getElementById('option0');
-// var option1 = document.getElementById('option1');
-// var option2 = document.getElementById('option2');
-// var option3 = document.getElementById('option3');
-// var option4 = document.getElementById('option4');
 
 
 var currentQuestionIndex = 0;
 var score = 0;
+var currentQuestion= quiz[currentQuestionIndex];
 
-function startquiz() {
-    score = 0;
-    currentQuestionIndex = 0;
-    nextbutton.innerHTML = 'Next'
-    showQuiz();
+// Function to display the current question
+        function displayQuestion() {
+        var currentQuestion= quiz[currentQuestionIndex];
+        var questionnum = currentQuestionIndex + 1;
 
-}
-
-function showQuiz() {
-    let currentQuestion = quiz[currentQuestionIndex];
-    let questionnum = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionnum + ". " + currentQuestion.question;
+        questionElement.innerHTML = questionnum + quiz[currentQuestion].question;
 
         optionsElement.innerHTML = "";
 
-    currentQuestion.answer.forEach(answer => {
-        var button = document.createElement('options');
-        button.innerHTML = answer.option;
-        button.classList.add('btn');
-        buttons.appendChild(button);
-    });
-}
+        quiz[currentQuestion].options.forEach(option => {
+            var button = document.createElement("button");
+            button.textContent = option;
+            button.addEventListener("click", handleAnswer);
+            optionsElement.appendChild(button);
+        });
+        }
 
-startquiz();
+        // Function to handle user's answer
+        function handleAnswer(event) {
+        var selectedOption = event.target.textContent;
+        var correctAnswer = quiz[currentQuestion].answer;
+
+        if (selectedOption === correctAnswer) {
+            score++;
+        }
+
+        currentQuestion++;
+
+        if (currentQuestion < quiz.length) {
+            displayQuestion();
+        } else {
+            displayScore();
+        }
+        }
+
+        // Function to display the final score
+        function displayScore() {
+        var scoreElement = document.getElementById("score");
+        scoreElement.textContent = `Your score: ${score}/${quiz.length}`;
+    }
+
+    // Display the first question
+    displayQuestion();

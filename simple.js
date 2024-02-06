@@ -29,7 +29,7 @@ var createWeatherCard = (cityName, weatherItem, index) => {
     };
 
     var getWeatherDetails = (cityName, lat, lon) => {
-    var WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast/daily?lat${lat}&lon${lo}&appid=${API_KEY}`;
+    var WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
     console.log(data)
     fetch(WEATHER_API_URL)
         .then(res => res.json())
@@ -62,10 +62,10 @@ var createWeatherCard = (cityName, weatherItem, index) => {
     };
 
     var getCityCoordinates = () => {
-    var cityName = cityInput.value;
+    var cityName = cityInput.value.trim();
     if (!cityName) return;
 
-    var GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=${API_KEY}`;
+    var GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
     console.log()
     
     fetch(GEOCODING_API_URL)
